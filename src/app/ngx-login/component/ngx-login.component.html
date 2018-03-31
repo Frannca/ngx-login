@@ -1,0 +1,61 @@
+<!--
+NgxLoginComponent
+
+Login panel built with Semantic UI, Angular Reactive Forms and Angular Validators.
+
+References:
+- https://semantic-ui.com
+- https://angular.io/guide/reactive-forms
+- https://angular.io/guide/form-validation
+-->
+<div class="ui ngx login middle aligned center aligned grid container">
+  <div class="column">
+
+    <!-- Logo -->
+    <img [src]="logo" class="ui centered medium image">
+
+      <!-- Login form -->
+      <form class="ui large form" (ngSubmit)="onSubmit() && submitted" [formGroup]="loginForm"
+            [ngClass]="{ 'error': '' }" novalidate>
+        <div class="ui segment left aligned" [ngClass]="[color]">
+
+          <!-- Email input -->
+          <div class="field" [ngClass]="{'error': loginForm.controls['email'].errors && submitted}">
+            <label for="email">Email</label>
+            <div class="ui left icon input">
+              <i class="user icon"></i>
+              <input formControlName="email" id="email" placeholder="Email">
+            </div>
+            <div *ngIf="loginForm.controls['email'].errors && submitted">
+              <div class="ui pointing label" *ngIf="(loginForm.controls['email'].errors | error) === 'required'">
+                Email is required
+              </div>
+              <div class="ui pointing label" *ngIf="(loginForm.controls['email'].errors | error) === 'email'">
+                Email is invalid
+              </div>
+            </div>
+          </div><!-- / Email input -->
+
+          <!-- Password input -->
+          <div class="field" [ngClass]="{'error': loginForm.controls['password'].errors && submitted}">
+            <label for="password">Password</label>
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input formControlName="password" id="password" placeholder="Password">
+            </div>
+            <div *ngIf="loginForm.controls['password'].errors && submitted">
+              <div class="ui pointing label" *ngIf="(loginForm.controls['password'].errors | error) === 'required'">
+                Password is required
+              </div>
+            </div>
+          </div><!-- / Password input -->
+
+          <!-- Submit button -->
+          <button class="ui fluid large submit button" type="submit" [ngClass]="{ 'loading': loading }" [class]="color">
+            <i class="sign in icon"></i>
+            Login
+          </button>
+        </div>
+      </form><!-- / Login form -->
+  </div>
+</div>
