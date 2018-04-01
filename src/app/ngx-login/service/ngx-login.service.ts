@@ -17,7 +17,7 @@ export class NgxLoginService {
   /**
    * Performs the login
    */
-  login(email: string, password: string, fieldOne: string, fieldTwo: string, apiUrl: string, prefix: string) {
+  login(email: string, password: string, fieldOne: string, fieldTwo: string, apiUrl: string, prefix: string): any {
     const body = new URLSearchParams();
     body.set(fieldOne, email);
     body.set(fieldTwo, password);
