@@ -1,6 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgxLoginService } from '../service/ngx-login.service';
+import { NgxLoginConfig, NgxLoginToken} from '../ngx-login-config';
+import { ToastrService } from 'ngx-toastr';
 import { NGX_LOGIN_LOGO } from '../assets/base64-logo';
 
 @Component({
@@ -44,15 +47,26 @@ export class NgxLoginComponent {
   submitted = false;
 
   /**
+   * ngx-login configuration
+   */
+  ngxLoginConfig: NgxLoginConfig;
+
+  /**
    * Constructor
    *
    * @param {FormBuilder} fb
    * @param {NgxLoginService} service
    */
   constructor(
+    @Inject(NgxLoginToken) token,
     private fb: FormBuilder,
+    private router: Router,
+    private toastr: ToastrService,
     public service: NgxLoginService
   ) {
+    const defaultConfig = new token.defaults;
+    this.ngxLoginConfig = { ...defaultConfig, ...token.config };
+
     this.createForm();
   }
 
@@ -76,23 +90,34 @@ export class NgxLoginComponent {
     this.submitted = true;
     this.loading = true;
 
-
     if (this.loginForm.valid === true) {
-      this.service.login(this.loginForm.value.email, this.loginForm.value.password)
-        .subscribe(
-          data => {
-            // this.router.navigate([this.returnUrl]);
-            console.log('logged in');
+      this.service.login(
+        this.loginForm.value.email,
+        this.loginForm.value.password,
+        this.ngxLoginConfig.fieldOne,
+        this.ngxLoginConfig.fieldTwo,
+        this.ngxLoginConfig.apiUrl,
+        this.ngxLoginConfig.prefix
+      ).subscribe(
+        data => {
+            const body: any = data;
+            this.toastr.success(body.message, this.ngxLoginConfig.messageSuccess);
+            setTimeout(() => {
+              this.router.navigate([this.ngxLoginConfig.redirect]).then(() => {
+                if (this.ngxLoginConfig.redirectExternal) {
+                  window.location.href = this.ngxLoginConfig.redirectExternal;
+                }
+              });
+              this.loading = false;
+            }, 1500);
           },
           error => {
+            const body = error.json();
+            this.toastr.error(body.message, this.ngxLoginConfig.messageError);
             this.loading = false;
           }
         );
     }
-
-    setTimeout(() => {
-      this.loading = false;
-    }, 2000);
   }
 
 }

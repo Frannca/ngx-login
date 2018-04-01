@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxLoginComponent } from './component/ngx-login.component';
 import { NgxLoginService } from './service/ngx-login.service';
-import { NgxLoginConfig } from './ngx-login-config';
+import { NgxLoginConfig, NgxLoginDefaultConfig, NgxLoginToken } from './ngx-login-config';
 import { ErrorPipe } from './pipe/error.pipe';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpModule,
     ReactiveFormsModule,
-    HttpModule
   ],
   declarations: [
     NgxLoginComponent,
@@ -43,12 +43,12 @@ export class NgxLoginModule {
    * @param options
    * @returns {ModuleWithProviders}
    */
-  static forRoot(options: any): ModuleWithProviders {
+  static forRoot(config: Partial<NgxLoginConfig> = {}): ModuleWithProviders {
     return {
       ngModule: NgxLoginModule,
       providers: [
         NgxLoginService,
-        { provide: NgxLoginConfig, useValue: options }
+        { provide: NgxLoginToken, useValue: { config, defaults: NgxLoginDefaultConfig} }
         ]
     };
   }

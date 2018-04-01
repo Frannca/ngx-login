@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "assets/semantic/semantic.css",
-        "styles.css"
+        "styles.css",
+        "../node_modules/ngx-toastr/toastr.css"
       ],
       "scripts": [
         "assets/js/jquery/jquery.min.js"

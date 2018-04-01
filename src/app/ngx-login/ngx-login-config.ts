@@ -1,6 +1,25 @@
 import { InjectionToken } from '@angular/core';
 
-import { NgxLoginConfigInterface } from './ngx-login-config.interface';
-export { NgxLoginConfigInterface } from './ngx-login-config.interface';
+export const NgxLoginToken = new InjectionToken<NgxLoginConfig>('NgxLoginToken');
 
-export const NgxLoginConfig = new InjectionToken<string>('NgxLoginConfig');
+export class NgxLoginConfig {
+  apiUrl: string;
+  fieldOne: string;
+  fieldTwo: string;
+  messageError: string;
+  messageSuccess: string;
+  prefix: string;
+  redirect: string;
+  redirectExternal: string;
+}
+
+export class NgxLoginDefaultConfig implements NgxLoginConfig {
+  apiUrl = 'NGX_LOGIN_API_URL';
+  fieldOne = 'email';
+  fieldTwo = 'password';
+  messageError = 'Error!';
+  messageSuccess = 'Success!';
+  prefix = 'ngx_login_';
+  redirect = '/';
+  redirectExternal = null;
+}
