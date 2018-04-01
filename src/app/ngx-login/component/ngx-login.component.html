@@ -24,7 +24,7 @@ References:
             <label for="email">Email</label>
             <div class="ui left icon input">
               <i class="user icon"></i>
-              <input formControlName="email" id="email" placeholder="Email">
+              <input type="text" formControlName="email" id="email" placeholder="Email">
             </div>
             <div *ngIf="loginForm.controls['email'].errors && submitted">
               <div class="ui pointing label" *ngIf="(loginForm.controls['email'].errors | error) === 'required'">
@@ -41,7 +41,7 @@ References:
             <label for="password">Password</label>
             <div class="ui left icon input">
               <i class="lock icon"></i>
-              <input formControlName="password" id="password" placeholder="Password">
+              <input type="password" formControlName="password" id="password" placeholder="Password">
             </div>
             <div *ngIf="loginForm.controls['password'].errors && submitted">
               <div class="ui pointing label" *ngIf="(loginForm.controls['password'].errors | error) === 'required'">

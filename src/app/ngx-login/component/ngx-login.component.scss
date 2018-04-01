@@ -1,25 +1,27 @@
-// Login segment max width
 .ngx {
   &.login {
+    .ui {
+      &.frannca {
+        &.button,
+        &.buttons .button {
+          &:hover {
+            background-color: #aa1e1f;
+          }
+          background-color: #bb2324;
+          color: white;
+        }
+        &.segment {
+          &:not(.inverted) {
+            border-top: 2px solid #bb2324;
+          }
+        }
+      }
+      &.label {
+        text-align: center;
+        width: 100%;
+      }
+    }
     max-width: 400px !important;
   }
 }
 
-// Frannca color
-.ui {
-  &.frannca {
-    &.button,
-    &.buttons .button {
-      &:hover {
-        background-color: #aa1e1f;
-      }
-      background-color: #bb2324;
-      color: white;
-    }
-    &.segment {
-      &:not(.inverted) {
-        border-top: 2px solid #bb2324;
-      }
-    }
-  }
-}

@@ -76,10 +76,18 @@ export class NgxLoginComponent {
     this.submitted = true;
     this.loading = true;
 
-    console.log(this.loginForm.value);
 
     if (this.loginForm.valid === true) {
-      this.service.login();
+      this.service.login(this.loginForm.value.email, this.loginForm.value.password)
+        .subscribe(
+          data => {
+            // this.router.navigate([this.returnUrl]);
+            console.log('logged in');
+          },
+          error => {
+            this.loading = false;
+          }
+        );
     }
 
     setTimeout(() => {

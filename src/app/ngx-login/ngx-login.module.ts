@@ -5,11 +5,13 @@ import { NgxLoginComponent } from './component/ngx-login.component';
 import { NgxLoginService } from './service/ngx-login.service';
 import { NgxLoginConfig } from './ngx-login-config';
 import { ErrorPipe } from './pipe/error.pipe';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    HttpModule
   ],
   declarations: [
     NgxLoginComponent,
