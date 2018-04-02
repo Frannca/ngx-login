@@ -4,10 +4,17 @@
   "version": "0.0.0-development",
   "author": "Renato França",
   "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular4",
+    "ngx",
+    "login"
+  ],
   "scripts": {
     "build": "ng-packagr -p package.json",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "semantic-release": "cd dist && semantic-release; cd .."
   },
   "ngPackage": {
     "lib": {
