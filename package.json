@@ -1,17 +1,19 @@
 {
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@frannca/ngx-login",
   "version": "0.0.0-development",
+  "author": "Renato França",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "packagr:ngx-login": "ng-packagr -p ng-package.json",
+    "build": "ng-packagr -p package.json",
+    "copyPackageJson": "copyfiles package.json dist",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release pre && npm run copyPackageJson && npm publish dist && semantic-release post"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
   },
   "private": false,
   "dependencies": {
