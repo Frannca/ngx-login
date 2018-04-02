@@ -60,7 +60,7 @@
     "travis-deploy-once": "^4.4.1"
   },
   "release": {
-    "verifyConditions": ["@semantic-release/npm", "@semantic-release/git", "@semantic-release/github"],
+    "verifyConditions": ["@semantic-release/npm"],
     "publish": [
       {
         "path": "@semantic-release/npm",
