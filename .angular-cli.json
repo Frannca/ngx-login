@@ -1,11 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "angular-component-library"
+    "name": "ngx-angular"
   },
   "apps": [
     {
-      "root": "src",
+      "root": "demo",
       "outDir": "dist",
       "assets": [
         "assets",
