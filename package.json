@@ -65,7 +65,7 @@
       {
         "path": "@semantic-release/npm",
         "pkgRoot": "dist"
-      },
+      }
     ]
   },
   "config": {
