@@ -100,23 +100,25 @@ export class NgxLoginComponent {
         this.ngxLoginConfig.prefix
       ).subscribe(
         data => {
-            const body: any = data;
-            this.toastr.success(body.message, this.ngxLoginConfig.messageSuccess);
-            setTimeout(() => {
-              this.router.navigate([this.ngxLoginConfig.redirect]).then(() => {
-                if (this.ngxLoginConfig.redirectExternal) {
-                  window.location.href = this.ngxLoginConfig.redirectExternal;
-                }
-              });
-              this.loading = false;
-            }, 1500);
-          },
-          error => {
-            const body = error.json();
-            this.toastr.error(body.message, this.ngxLoginConfig.messageError);
+          const body: any = data;
+          this.toastr.success(body.message, this.ngxLoginConfig.messageSuccess);
+          setTimeout(() => {
+            this.router.navigate([this.ngxLoginConfig.redirect]).then(() => {
+              if (this.ngxLoginConfig.redirectExternal) {
+                window.location.href = this.ngxLoginConfig.redirectExternal;
+              }
+            });
             this.loading = false;
-          }
-        );
+          }, 1500);
+        },
+        error => {
+          const body = error.json();
+          this.toastr.error(body.message, this.ngxLoginConfig.messageError);
+          this.loading = false;
+        }
+      );
+    } else {
+      this.loading = false;
     }
   }
 
