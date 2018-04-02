@@ -17,7 +17,6 @@ import { ToastrModule } from 'ngx-toastr';
     NgxLoginModule.forRoot({
       apiUrl: 'http://guiagaranhuns.localhost/autenticar',
       prefix: 'ngx_login_',
-      fieldTwo: 'senha'
     }),
     ToastrModule.forRoot()
   ],
