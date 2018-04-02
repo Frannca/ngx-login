@@ -1,10 +1,10 @@
 import { Component, Inject, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgxLoginService } from '../service/ngx-login.service';
-import { NgxLoginConfig, NgxLoginToken} from '../ngx-login-config';
+import { NgxLoginService } from './ngx-login.service';
+import { NgxLoginConfig, NgxLoginToken} from './ngx-login-config';
 import { ToastrService } from 'ngx-toastr';
-import { NGX_LOGIN_LOGO } from '../assets/base64-logo';
+import { NGX_LOGIN_LOGO } from './base64-logo';
 
 @Component({
   selector: 'app-ngx-login',

@@ -1,10 +1,10 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgxLoginComponent } from './component/ngx-login.component';
-import { NgxLoginService } from './service/ngx-login.service';
+import { NgxLoginComponent } from './ngx-login.component';
+import { NgxLoginService } from './ngx-login.service';
 import { NgxLoginConfig, NgxLoginDefaultConfig, NgxLoginToken } from './ngx-login-config';
-import { ErrorPipe } from './pipe/error.pipe';
+import { ErrorPipe } from './error.pipe';
 import { HttpModule } from '@angular/http';
 
 @NgModule({

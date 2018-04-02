@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-import { NgxLoginComponent } from './ngx-login/component/ngx-login.component';
+import { NgxLoginComponent } from '../../src/ngx-login.component';
 
 const appRoutes: Routes = [
     {
