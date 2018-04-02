@@ -1,6 +1,6 @@
 {
   "name": "@frannca/ngx-login",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "packagr:ngx-login": "ng-packagr -p ng-package.json"
+    "packagr:ngx-login": "ng-packagr -p ng-package.json",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "private": false,
   "dependencies": {
@@ -37,6 +39,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.1",
+    "cz-conventional-changelog": "^2.1.0",
     "gulp": "^3.9.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
@@ -48,9 +51,20 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "1.7.0",
     "protractor": "~5.1.2",
+    "semantic-release": "^15.1.4",
     "ts-node": "~3.0.4",
     "tsickle": "^0.27.2",
     "tslint": "~5.3.2",
-    "typescript": "~2.3.4"
+    "typescript": "~2.3.4",
+    "travis-deploy-once": "^4.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frannca/ngx-login.git"
   }
 }
