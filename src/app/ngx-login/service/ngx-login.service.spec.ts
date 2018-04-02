@@ -9,7 +9,4 @@ describe('NgxLoginService', () => {
     });
   });
 
-  it('should be created', inject([NgxLoginService], (service: NgxLoginService) => {
-    expect(service).toBeTruthy();
-  }));
 });
