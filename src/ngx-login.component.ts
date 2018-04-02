@@ -1,10 +1,10 @@
 import { Component, Inject, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgxLoginService } from '../service/ngx-login.service';
-import { NgxLoginConfig, NgxLoginToken} from '../ngx-login-config';
+import { NgxLoginService } from './ngx-login.service';
+import { NgxLoginConfig, NgxLoginToken} from './ngx-login-config';
 import { ToastrService } from 'ngx-toastr';
-import { NGX_LOGIN_LOGO } from '../assets/base64-logo';
+import { NGX_LOGIN_LOGO } from './base64-logo';
 
 @Component({
   selector: 'app-ngx-login',
@@ -100,23 +100,25 @@ export class NgxLoginComponent {
         this.ngxLoginConfig.prefix
       ).subscribe(
         data => {
-            const body: any = data;
-            this.toastr.success(body.message, this.ngxLoginConfig.messageSuccess);
-            setTimeout(() => {
-              this.router.navigate([this.ngxLoginConfig.redirect]).then(() => {
-                if (this.ngxLoginConfig.redirectExternal) {
-                  window.location.href = this.ngxLoginConfig.redirectExternal;
-                }
-              });
-              this.loading = false;
-            }, 1500);
-          },
-          error => {
-            const body = error.json();
-            this.toastr.error(body.message, this.ngxLoginConfig.messageError);
+          const body: any = data;
+          this.toastr.success(body.message, this.ngxLoginConfig.messageSuccess);
+          setTimeout(() => {
+            this.router.navigate([this.ngxLoginConfig.redirect]).then(() => {
+              if (this.ngxLoginConfig.redirectExternal) {
+                window.location.href = this.ngxLoginConfig.redirectExternal;
+              }
+            });
             this.loading = false;
-          }
-        );
+          }, 1500);
+        },
+        error => {
+          const body = error.json();
+          this.toastr.error(body.message, this.ngxLoginConfig.messageError);
+          this.loading = false;
+        }
+      );
+    } else {
+      this.loading = false;
     }
   }
 
