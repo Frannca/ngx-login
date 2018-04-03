@@ -1,15 +1,10 @@
-<p align="center">
-  <h1>ngx-login</h1>
-  Login integration for Angular 4+
-</p>
+#ngx-login
 
-<p align="center">
-    <a href="https://travis-ci.org/Frannca/ngx-login"><img alt="Travis" src="https://img.shields.io/travis/Frannca/ngx-login.svg?style=for-the-badge"></a>
-</p>
+Login library for Angular.
 
-<br>
-
-This Angular package was built with [Semantic UI](https://github.com/Semantic-Org/Semantic-UI) and is mainly used in the Frannca's projects.
+[![npm](https://img.shields.io/npm/v/%40frannca/ngx-login.svg?style=for-the-badge)](https://www.npmjs.com/package/@frannca/ngx-login)
+[![Travis](https://img.shields.io/travis/Frannca/ngx-login.svg?style=for-the-badge)](https://travis-ci.org/Frannca/ngx-login)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
 ## Summary
 - [Quickstart](#quickstart)
