@@ -1,6 +1,5 @@
-<h1 align="center">ngx-login</h1>
-
 <p align="center">
+  <h1>ngx-login</h1>
   Login integration for Angular 4+
 </p>
 
