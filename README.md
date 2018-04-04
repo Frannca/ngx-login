@@ -1,36 +1,71 @@
-<h1 align="center">ngx-login</h1>
+# ngx-login
 
-<p align="center">
-  Login integration for Angular 4+
-</p>
+Login library for Angular 4+
 
-<p align="center">
-    <a href="https://travis-ci.org/Frannca/ngx-login"><img alt="Travis" src="https://img.shields.io/travis/Frannca/ngx-login.svg?style=for-the-badge"></a>
-</p>
+[![npm](https://img.shields.io/npm/v/%40frannca/ngx-login.svg?style=for-the-badge)](https://www.npmjs.com/package/@frannca/ngx-login)
+[![Travis](https://img.shields.io/travis/Frannca/ngx-login.svg?style=for-the-badge)](https://travis-ci.org/Frannca/ngx-login)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=for-the-badge)](https://github.com/semantic-release/semantic-release)
 
-<br>
+This library is focused on Angular authentication and is part of [Frannca's Solutions](http://frannca.com) to save time on projects development.
 
-This Angular package was built with [Semantic UI](https://github.com/Semantic-Org/Semantic-UI) and is mainly used in the Frannca's projects.
+## Table of Contents
 
-## Summary
-- [Quickstart](#quickstart)
-- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
 - [Copyright and license](#copyright-and-license)
 
-## Quickstart
+## Installation
 
-Follow the steps below to get the package running:
+You need npm to install the package. If you do not have npm installed, follow [this instructions](https://github.com/npm/npm).
 
-- Clone the repository: `git clone https://github.com/Frannca/ngx-login.git`
-- Go to the project folder: `cd ngx-login`
-- Install with [npm](https://www.npmjs.com): `npm install`
-- Build with [Angular CLI](http://cli.angular.io): `ng server`
-- Go to [localhost:4200](localhost:4200)
+**npm**
+
+```
+npm install @frannca/ngx-login --save
+```
+
+## Usage
+
+The library is packed with everything you need to get login works.
+
+**Import the module**
+
+The first thing you have to do, is to import the `NgxLoginModule` in the AppModule:
+
+```javascript
+NgxLoginModule.forRoot({
+  apiUrl: 'API_URL',
+})
+```
+
+**Insert the component**
+
+Now you just need to insert the component where you want the login to be displayed:
+
+```html
+<app-ngx-login></app-ngx-login>
+```
+
+## Configuration
+
+The **ngx-login** comes with nice configuration options:
+
+| Option           | Default Value | Description                               |
+| ---------------- | ------------- | ----------------------------------------- |
+| fieldOne         | 'email'       | Name of the first field used for the API  |
+| fieldTwo         | 'password'    | Name of the second field used for the API |
+| messageError     | 'Error!'      | Toastr error title                        |
+| messageSuccess   | 'Success!'    | Toastr success title                      |
+| prefix           | 'ngx_login_'  | Prefix used by the localStorage           |
+| redirect         | '/'           | Angular internal redirect                 |
+| redirectExternal | null          | Angular external redirect                 |
 
 ## Requirements
 
-- Node 6.9.x ou superior
-- Npm 3.x.x ou superior
+- Angular 4 or higher
 
 ## Copyright and license
 
