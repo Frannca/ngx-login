@@ -35,3 +35,12 @@ Example:
 >
 > - ngx-version: v1.0.1
 > - browser: Safari - Version 11.0.3 (13604.5.6)
+
+## Pull request
+
+Want to improve or fix a bug? First off, thank you! We really appreciate your effort. Please consider these guidelines when creating a pull request:
+
+- Follow the [Angular commit convention](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines);
+- Keep the code well formatted (indentation at 2 spaces);
+- Comment the code, when you judge necessary;
+- Feel free to innovate!
