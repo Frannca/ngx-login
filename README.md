@@ -15,6 +15,7 @@ This library is focused on Angular authentication and is part of [Frannca's Solu
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
+- [Contributing](#contributing)
 - [Copyright and license](#copyright-and-license)
 
 ## Installation
@@ -66,6 +67,10 @@ The **ngx-login** comes with nice configuration options:
 ## Requirements
 
 - Angular 4 or higher
+
+## Contributing
+
+We would love to have your contributions. Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
 ## Copyright and license
 
