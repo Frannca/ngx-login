@@ -67,6 +67,7 @@ The **ngx-login** comes with nice configuration options:
 ## Requirements
 
 - Angular 4 or higher
+- Toastr 6.0.0
 
 ## Contributing
 
