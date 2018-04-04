@@ -5,6 +5,8 @@ Login library for Angular 4+
 [![npm](https://img.shields.io/npm/v/%40frannca/ngx-login.svg?style=for-the-badge)](https://www.npmjs.com/package/@frannca/ngx-login)
 [![Travis](https://img.shields.io/travis/Frannca/ngx-login.svg?style=for-the-badge)](https://travis-ci.org/Frannca/ngx-login)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=for-the-badge)](https://github.com/semantic-release/semantic-release)
 
 This library is focused on Angular authentication and is part of [Frannca's Solutions](http://frannca.com) to save time on projects development.
 
@@ -63,8 +65,7 @@ The **ngx-login** comes with nice configuration options:
 
 ## Requirements
 
-- Node 6.9.x ou superior
-- Npm 3.x.x ou superior
+- Angular 4 or higher
 
 ## Copyright and license
 
