@@ -6,12 +6,14 @@ import { NgxLoginService } from './ngx-login.service';
 import { NgxLoginConfig, NgxLoginDefaultConfig, NgxLoginToken } from './ngx-login-config';
 import { ErrorPipe } from './error.pipe';
 import { HttpModule } from '@angular/http';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
     ReactiveFormsModule,
+    ToastrModule
   ],
   declarations: [
     NgxLoginComponent,
