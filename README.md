@@ -54,15 +54,18 @@ Now you just need to insert the component where you want the login to be display
 
 The **ngx-login** comes with nice configuration options:
 
-| Option           | Default Value | Description                               |
-| ---------------- | ------------- | ----------------------------------------- |
-| fieldOne         | 'email'       | Name of the first field used for the API  |
-| fieldTwo         | 'password'    | Name of the second field used for the API |
-| messageError     | 'Error!'      | Toastr error title                        |
-| messageSuccess   | 'Success!'    | Toastr success title                      |
-| prefix           | 'ngx_login_'  | Prefix used by the localStorage           |
-| redirect         | '/'           | Angular internal redirect                 |
-| redirectExternal | null          | Angular external redirect                 |
+| Option           | Default Value  | Description                               |
+| ---------------- | -------------- | ----------------------------------------- |
+| fieldOne         | 'email'        | Name of the first field used for the API  |
+| fieldTwo         | 'password'     | Name of the second field used for the API |
+| logo             | NGX_LOGIN_LOGO | Login logo                                |
+| messageError     | 'Error!'       | Toastr error title                        |
+| messageSuccess   | 'Success!'     | Toastr success title                      |
+| prefix           | 'ngx_login_'   | Prefix used by the localStorage           |
+| redirect         | '/'            | Angular internal redirect                 |
+| redirectExternal | null           | Angular external redirect                 |
+
+**NGX_LOGIN_LOGO:** this is a constant with the ngx-login base64 logo.
 
 ## Requirements
 

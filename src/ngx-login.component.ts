@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { NgxLoginService } from './ngx-login.service';
 import { NgxLoginConfig, NgxLoginToken} from './ngx-login-config';
 import { ToastrService } from 'ngx-toastr';
-import { NGX_LOGIN_LOGO } from './base64-logo';
 
 @Component({
   selector: 'app-ngx-login',
@@ -18,7 +17,7 @@ export class NgxLoginComponent {
    *
    * @type {string}
    */
-  @Input() logo = NGX_LOGIN_LOGO;
+  @Input() logo: string;
 
   /**
    * Primary color
@@ -66,6 +65,7 @@ export class NgxLoginComponent {
   ) {
     const defaultConfig = new token.defaults;
     this.ngxLoginConfig = { ...defaultConfig, ...token.config };
+    this.logo = this.ngxLoginConfig.logo;
 
     this.createForm();
   }
