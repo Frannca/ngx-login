@@ -5,6 +5,7 @@ export const NgxLoginToken = new InjectionToken<NgxLoginConfig>('NgxLoginToken')
 
 export class NgxLoginConfig {
   apiUrl: string;
+  color: string;
   fieldOne: string;
   fieldTwo: string;
   logo: string;
@@ -17,6 +18,7 @@ export class NgxLoginConfig {
 
 export class NgxLoginDefaultConfig implements NgxLoginConfig {
   apiUrl = 'NGX_LOGIN_API_URL';
+  color = 'frannca';
   fieldOne = 'email';
   fieldTwo = 'password';
   logo = NGX_LOGIN_LOGO;
