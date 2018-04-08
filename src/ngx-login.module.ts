@@ -7,6 +7,7 @@ import { NgxLoginConfig, NgxLoginDefaultConfig, NgxLoginToken } from './ngx-logi
 import { ErrorPipe } from './error.pipe';
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
+import { TranslatePipe } from './translate.pipe';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     NgxLoginComponent,
     ErrorPipe,
+    TranslatePipe
   ],
   exports: [
     NgxLoginComponent,

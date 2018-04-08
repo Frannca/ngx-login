@@ -56,6 +56,7 @@ The **ngx-login** comes with nice configuration options:
 
 | Option           | Default Value  | Description                               |
 | ---------------- | -------------- | ----------------------------------------- |
+| color            | 'frannca'      | Login box color                           |
 | fieldOne         | 'email'        | Name of the first field used for the API  |
 | fieldTwo         | 'password'     | Name of the second field used for the API |
 | logo             | NGX_LOGIN_LOGO | Login logo                                |

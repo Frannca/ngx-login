@@ -24,7 +24,7 @@ export class NgxLoginComponent {
    *
    * @type {string}
    */
-  @Input() color = 'frannca';
+  @Input() color: string;
 
   /**
    * Form loader
@@ -65,6 +65,7 @@ export class NgxLoginComponent {
   ) {
     const defaultConfig = new token.defaults;
     this.ngxLoginConfig = { ...defaultConfig, ...token.config };
+    this.color = this.ngxLoginConfig.color;
     this.logo = this.ngxLoginConfig.logo;
 
     this.createForm();

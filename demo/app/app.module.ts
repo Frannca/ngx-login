@@ -16,7 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     NgxLoginModule.forRoot({
       apiUrl: 'http://guiagaranhuns.localhost/autenticar',
-      prefix: 'ngx_login_',
+      prefix: 'ngx_login_'
     }),
     ToastrModule.forRoot()
   ],
