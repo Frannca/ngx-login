@@ -8,6 +8,7 @@ export class NgxLoginConfig {
   color: string;
   fieldOne: string;
   fieldTwo: string;
+  locale: string;
   logo: string;
   messageError: string;
   messageSuccess: string;
@@ -21,6 +22,7 @@ export class NgxLoginDefaultConfig implements NgxLoginConfig {
   color = 'frannca';
   fieldOne = 'email';
   fieldTwo = 'password';
+  locale = 'en';
   logo = NGX_LOGIN_LOGO;
   messageError = 'Error!';
   messageSuccess = 'Success!';
