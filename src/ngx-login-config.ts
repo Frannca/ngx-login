@@ -7,6 +7,7 @@ export class NgxLoginConfig {
   apiUrl: string;
   fieldOne: string;
   fieldTwo: string;
+  locale: string;
   logo: string;
   messageError: string;
   messageSuccess: string;
@@ -19,6 +20,7 @@ export class NgxLoginDefaultConfig implements NgxLoginConfig {
   apiUrl = 'NGX_LOGIN_API_URL';
   fieldOne = 'email';
   fieldTwo = 'password';
+  locale = 'en';
   logo = NGX_LOGIN_LOGO;
   messageError = 'Error!';
   messageSuccess = 'Success!';
