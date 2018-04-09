@@ -12,11 +12,18 @@ This library is focused on Angular authentication and is part of [Frannca's Solu
 
 ## Table of Contents
 
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 - [Copyright and license](#copyright-and-license)
+
+## Requirements
+
+- Node 6.9.x
+- npm 3.x.x
+- Toastr 6.x.x
 
 ## Installation
 
@@ -67,11 +74,6 @@ The **ngx-login** comes with nice configuration options:
 | redirectExternal | null           | Angular external redirect                 |
 
 **NGX_LOGIN_LOGO:** this is a constant with the ngx-login base64 logo.
-
-## Requirements
-
-- Angular 4 or higher
-- Toastr 6.0.0
 
 ## Contributing
 
