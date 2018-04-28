@@ -9,7 +9,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxLoginComponent } from './ngx-login.component';
 import { NgxLoginModule } from './ngx-login.module';
-import { NgxLoginService } from './ngx-login.service';
 
 describe('NgxLoginComponent', () => {
   let component: NgxLoginComponent;
@@ -19,13 +18,10 @@ describe('NgxLoginComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        ReactiveFormsModule,
         NgxLoginModule.forRoot(),
+        ReactiveFormsModule,
         RouterTestingModule,
         ToastrModule.forRoot()
-      ],
-      providers: [
-        NgxLoginService,
       ]
     })
       .compileComponents();
