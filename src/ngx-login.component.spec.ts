@@ -1,3 +1,4 @@
+import { DebugElement } from '@angular/core';
 import {
   async,
   ComponentFixture,
@@ -13,6 +14,7 @@ import { NgxLoginService } from './ngx-login.service';
 describe('NgxLoginComponent', () => {
   let component: NgxLoginComponent;
   let fixture: ComponentFixture<NgxLoginComponent>;
+  let debugElement: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -27,16 +29,33 @@ describe('NgxLoginComponent', () => {
       ]
     })
       .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(NgxLoginComponent);
+    debugElement = fixture.debugElement;
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
   it('should be created', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have one text input', () => {
+    const loginElement: HTMLInputElement = debugElement.nativeElement;
+    const input = loginElement.querySelector('input[type="text"]');
+    expect(input).toBeTruthy();
+  });
+
+  it('should have one password input', () => {
+    const loginElement: HTMLInputElement = debugElement.nativeElement;
+    const input = loginElement.querySelector('input[type="password"]');
+    expect(input).toBeTruthy();
+  });
+
+  it('should have one submit button', () => {
+    const loginElement: HTMLButtonElement = debugElement.nativeElement;
+    const button = loginElement.querySelector('button[type="submit"]');
+    expect(button).toBeTruthy();
   });
 
 });
